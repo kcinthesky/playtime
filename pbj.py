@@ -4,8 +4,8 @@
 
 
 peanut_butter = 10
-jelly = 3
-bread = 10
+jelly = 0
+bread = 1
 
 
 if jelly < 1:
@@ -30,8 +30,8 @@ else:
 
 
 peanut_butter = 10
-jelly = 3
-bread = 11
+jelly = 0
+bread = 4
 
 number_of_bread = bread/2
 
@@ -52,15 +52,43 @@ print "You can make {0} sandwiches.".format(sandwiches)
 
 # Third Goal: Modify that program to allow you to make open-face sandwiches if you have an odd number of slices of bread ( )
 
+if number_of_bread % 2 == 1 and peanut_butter > 0 and jelly > 0:
 
+# How to say %2 OR 1 slice available???
+
+	print "You can make an open-face sandwich."
+elif number_of_bread % 2 == 0:
+	print "You're eating PB & J, no bread."
+else:
+	print "You're going to be hungry!"
 
 
 
 # Fourth Goal: Modify that program to tell you: if you're missing ingredients, which ones you need to be able to make your sandwiches
 
+if bread == 1:
+	print "You can make one open-face sandwich but you need bread for a full sandwich."
+
+if peanut_butter < 1:
+	print "You need peanut butter."
+else:
+	print "Peanut butter is in stock."
+
+if jelly < 1:
+	print "You need jelly."
+else:
+	print "Jelly is in stock."
+
+
+
+
 # Fifth Goal: Modify that program to tell you: if you have enough bread and peanut butter but no jelly, that you can make a peanut butter sandwich but you should take a hard, honest look at your life.  Wow, your program is kinda judgy.
 
+if bread >= 2 and peanut_butter >= 1 and jelly < 1:
+	print "You can make a peanut butter sandwich but you should take a hard, honest look at your life."
 
+else:
+	print "You can have a PB&J sandwich."
 # What are the step-by-steps to recreate this?
 # First, you need variables to store your information.  Remember, variables are just containers for your information that you give a name.
 
